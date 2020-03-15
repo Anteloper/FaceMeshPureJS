@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: 0px auto;
+            width: 500px;
+            height: 375px;
+            border: 10px #333 solid;
+        }
+
+        #videoElement {
+            width: 500px;
+            height: 375px;
+            background-color: #666;
+        }
+    </style>
+</head>
+
+<body onload="startWebGL()">
+    <canvas id="draw_surface" width="400" height="400">
+        Browser does not support WebGL
+    </canvas>
+
+
+    <h1><button onclick="btn()">Watch</button></h1>
+    <div id="container">
+        <video autoplay="true" id="videoElement">
+        </video>
+    </div>
+</body>
+
+<script src="faceMesh/core"></script>
+<script src="faceMesh/converter"></script>
+<script src="faceMesh/facemesh"></script>
+<script src="mask.js"></script>
+
+</html>
